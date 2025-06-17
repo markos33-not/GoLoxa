@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Go!</title>
+  <link rel="stylesheet" href="index.css" />
+  <script defer src="index.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header class="header">
+        <section class="buscador-tarjeta">
+          <div class="buscador-con-perfil">
+            <input
+              type="text"
+              id="buscador"
+              class="search-bar"
+              placeholder="Buscar"
+              autocomplete="off"
+            />
+            <a href="perfil.html" class="perfil-icono" title="Perfil">
+              <span class="material-symbols-outlined">account_circle</span>
+            </a>
+          </div>
+          <ul id="listaparroquias" class="hidden"></ul>
+        </section>
+    </header>
+
+    <!-- Carrusel -->
+    <section class="carrusel-container" id="carrusel">
+      <div class="carrusel-slide active">
+        <img src="Images/puertadelaciudad.jpg" alt="Puerta de la Ciudad" style="width:100%;height:260px;object-fit:cover;">
+        <div class="carrusel-caption">Puerta de la Ciudad</div>
+      </div>
+      <div class="carrusel-slide">
+        <img src="Images/parquejipiro.jpg" alt="Parque Jipiro" style="width:100%;height:260px;object-fit:cover;">
+        <div class="carrusel-caption">Parque Jipiro</div>
+      </div>
+      <div class="carrusel-slide">
+        <img src="Images/parquecentral.jpg" alt="Parque Central" style="width:100%;height:260px;object-fit:cover;">
+        <div class="carrusel-caption">Parque Central</div>
+      </div>
+    </section>
+
+    <!-- Título Cantón Loja centrado y destacado debajo del carrusel -->
+    <div class="canton-title-3d canton-title-center" style="margin-top: 28px;">
+      <h2>CANTÓN LOJA</h2>
+    </div>
+
+    <!-- Información del cantón Loja debajo del carrusel -->
+    <section class="canton-loja-section fade-in-canton canton-loja-center">
+      <div class="canton-desc">
+        <p>
+          <b>Ubicado en el corazón del sur del Ecuador</b>, el cantón Loja es un destino que lo tiene todo: cultura viva, paisajes impresionantes y una calidez humana que conquista a quien lo visita. Es la tierra donde la música florece en cada rincón, donde las montañas cuentan historias milenarias, y donde el pasado y el presente conviven en perfecta armonía.
+        </p>
+        <p>
+          Loja no solo es reconocida por su riqueza natural y arquitectónica, sino también por su espíritu innovador, su seguridad ciudadana y su gente amable. Desde las coloridas calles del centro histórico hasta las comunidades rurales rodeadas de neblina y café, Loja te invita a explorar, a respirar aire puro y a redescubrir el verdadero significado de tranquilidad.
+        </p>
+        <p>
+          Este cantón es cuna de artistas, poetas, científicos y artesanos. Es también un paraíso para el turismo ecológico y religioso, con lugares como el Santuario de El Cisne, las aguas cristalinas de Vilcabamba o los páramos del Parque Nacional Podocarpus. En Loja, cada visita es una experiencia única que combina historia, naturaleza y cultura.
+        </p>
+      </div>
+      <div class="canton-accordion">
+        <button class="accordion-btn" type="button" aria-expanded="false" aria-controls="unique-content">
+          ¿Qué hace único al cantón Loja?
+          <span class="accordion-arrow">&#9662;</span>
+        </button>
+        <div class="accordion-content" id="unique-content" hidden>
+          <ul>
+            <li>Es considerado la capital cultural del Ecuador, cuna de grandes músicos y artistas.</li>
+            <li>Alberga al Santuario de la Virgen del Cisne, uno de los centros de peregrinación más importantes de Sudamérica.</li>
+            <li>Tiene uno de los mejores índices de seguridad y calidad de vida del país.</li>
+            <li>Cuenta con una amplia variedad de ecosistemas: desde bosques secos hasta páramos y bosques nublados.</li>
+            <li>Es famoso por su café de altura, cultivado de forma artesanal en parroquias rurales.</li>
+            <li>Sus poblaciones rurales conservan tradiciones ancestrales, como el bordado en Taquil o las prácticas medicinales naturales en Vilcabamba.</li>
+          </ul>
+        </div>
+        <button class="accordion-btn" type="button" aria-expanded="false" aria-controls="datos-content">
+          Datos generales
+          <span class="accordion-arrow">&#9662;</span>
+        </button>
+        <div class="accordion-content" id="datos-content" hidden>
+          <ul>
+            <li><b>Provincia:</b> Loja</li>
+            <li><b>Superficie:</b> Aprox. 1.800 km²</li>
+            <li><b>Altitud:</b> Varía entre 1.200 y 3.800 m s.n.m.</li>
+            <li><b>Población:</b> Aproximadamente 250.000 habitantes (zonas urbana y rural)</li>
+            <li><b>Clima:</b> Templado en zonas urbanas (15 °C a 25 °C) y variado en parroquias rurales (cálido, frío o húmedo)</li>
+            <li><b>Capital:</b> Ciudad de Loja</li>
+            <li><b>Economía:</b> Basada en el comercio, turismo, agroindustria, artesanía y educación superior</li>
+            <li><b>Festividades destacadas:</b> Virgen del Cisne (agosto), Feria de Loja (septiembre), Independencia de Loja (noviembre), Festival Internacional de Artes Vivas Loja (noviembre)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <a href="lugares.html" class="explorar-btn fade-scroll">Explorar ahora</a>
+
+    <section class="menu-icons fade-scroll">
+        <div class="icon-item">
+            <a href="#">
+                <span class="material-icons">directions</span>
+                <p>Rutas</p>
+            </a>
+        </div>
+        <div class="icon-item">
+            <a href="recomendaciones.html">
+                <span class="material-icons">star</span>
+                <p>Recomendaciones</p>
+            </a>
+        </div>
+        <div class="icon-item">
+            <a href="mapa.html">
+                <span class="material-icons">map</span>
+                <p>Mapa</p>
+            </a>
+        </div>
+        <div class="icon-item" onclick="gestionarNotificaciones()">
+          <a href="javascript:void(0);" id="btnNotificaciones">
+            <span class="material-icons" id="iconoNotificacion">notification_important</span>
+            <p id="textoNotificacion">Activar notificaciones</p>
+          </a>
+        </div>
+    </section>
+    <nav class="nav-bottom">
+      <a href="index.html" class="nav-item active">
+        <span class="material-symbols-outlined">home</span>
+        <span class="nav-label">Inicio</span>
+      </a>
+      <a href="ubicación.html" class="nav-item">
+        <span class="material-symbols-outlined">Cloud</span>
+        <span class="nav-label">Clima</span>
+      </a>
+      <a href="descubrir.html" class="nav-item">
+        <span class="material-symbols-outlined">explore</span>
+        <span class="nav-label">Parroquias para Descubrir</span>
+    </nav>
+
+    <main>
+      <br><br><br>      <br><br>
+    </main>
+
+    <script>
+      // Accordion funcionalidad
+      document.querySelectorAll('.accordion-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+          const content = document.getElementById(this.getAttribute('aria-controls'));
+          const expanded = this.getAttribute('aria-expanded') === 'true';
+          // Cierra todos los demás
+          document.querySelectorAll('.accordion-btn').forEach(b => {
+            b.setAttribute('aria-expanded', 'false');
+            b.querySelector('.accordion-arrow').style.transform = 'rotate(0deg)';
+          });
+          document.querySelectorAll('.accordion-content').forEach(c => c.hidden = true);
+
+          if (!expanded) {
+            this.setAttribute('aria-expanded', 'true');
+            content.hidden = false;
+            this.querySelector('.accordion-arrow').style.transform = 'rotate(180deg)';
+          }
+        });
+      });
+    </script>
+</body>
+</html>
